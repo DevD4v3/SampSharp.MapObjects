@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/ci.yml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="src/SampSharp.MapObjects/SampSharp.MapObjects.csproj" />
+  <Project Path="src/SampSharp.MapObjects.Abstractions/SampSharp.MapObjects.Abstractions.csproj" />
+  <Project Path="tools/PawnMapTranslator/PawnMapTranslator.csproj" />
+  <Project Path="tools/PawnMapTranslator.Tests/PawnMapTranslator.Tests.csproj" />
+</Solution>
