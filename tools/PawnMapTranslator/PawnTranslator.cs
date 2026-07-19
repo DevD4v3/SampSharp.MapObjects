@@ -159,7 +159,7 @@ public static class PawnTranslator
         if (endIndex == -1)
         {
             throw new InvalidOperationException(
-                "Expected ');' at the end of CreateObject call.");
+                "Expected ');' at the end of SetObjectMaterial call.");
         }
 
         var arguments = line["SetObjectMaterial(".Length..endIndex];
