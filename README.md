@@ -215,3 +215,19 @@ Because of this, `IMapObjectService` enforces the following constraints:
 - All objects created through `CreateObject` are automatically destroyed when the current map is unloaded.
 
 This design matches game modes where maps rotate sequentially, such as Capture the Flag, Gun Game, Counter-Strike Team Deathmatch, or any mode that activates a single map at a time.
+
+## Contribution
+
+Contributions of all kinds are welcome! You can help by improving the code, documentation, or tests.
+
+To contribute:
+
+- Fork the repository.
+- Create a feature branch (`git checkout -b my-new-change`).
+- Commit your changes (`git commit -am "Add some change"`).
+- Push to your branch (`git push origin my-new-change`).
+- Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/DevD4v3/SampSharp.MapObjects/blob/master/LICENSE) file for details.
