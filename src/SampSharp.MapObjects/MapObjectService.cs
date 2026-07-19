@@ -9,7 +9,7 @@ internal sealed class MapObjectService(
         ArgumentException.ThrowIfNullOrWhiteSpace(mapName);
 
         if (!maps.TryGetValue(mapName, out MapDefinition map))
-            throw new InvalidOperationException($"Map '{mapName}' is not registered.");
+            return;
 
         MapContext context = serviceProvider.GetRequiredService<MapContext>();
         map.Load(context);
@@ -20,7 +20,7 @@ internal sealed class MapObjectService(
         ArgumentException.ThrowIfNullOrWhiteSpace(mapName);
 
         if (!maps.TryGetValue(mapName, out MapDefinition map))
-            throw new InvalidOperationException($"Map '{mapName}' is not registered.");
+            return;
 
         map.Unload();
     }

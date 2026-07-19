@@ -8,6 +8,9 @@ public interface IMapObjectService
     /// <summary>
     /// Loads the specified map into the game world.
     /// </summary>
+    /// <remarks>
+    /// If the specified map is not found, this method does nothing.
+    /// </remarks>
     /// <param name="mapName">
     /// The unique name of the map to load.
     /// </param>
@@ -15,13 +18,16 @@ public interface IMapObjectService
     /// <paramref name="mapName"/> is <see langword="null"/>, empty, or consists only of white-space characters.
     /// </exception>
     /// <exception cref="InvalidOperationException">
-    /// The specified map is not registered, or the map has already been loaded.
+    /// The map has already been loaded.
     /// </exception>
     void Load(string mapName);
 
     /// <summary>
     /// Unloads the specified map and destroys all objects created for it.
     /// </summary>
+    /// <remarks>
+    /// If the specified map is not found, this method does nothing.
+    /// </remarks>
     /// <param name="mapName">
     /// The unique name of the map to unload.
     /// </param>
@@ -29,7 +35,7 @@ public interface IMapObjectService
     /// <paramref name="mapName"/> is <see langword="null"/>, empty, or consists only of white-space characters.
     /// </exception>
     /// <exception cref="InvalidOperationException">
-    /// The specified map is not registered, or the map is not currently loaded.
+    /// The map is not currently loaded.
     /// </exception>
     void Unload(string mapName);
 }
