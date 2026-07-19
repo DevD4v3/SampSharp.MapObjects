@@ -9,10 +9,10 @@ internal abstract class MapDefinition
     protected abstract void OnLoad();
     protected virtual void OnUnload() { }
 
-    internal void Load(MapContext context)
+    internal void Load(MapContext mapContext)
     {
-        ArgumentNullException.ThrowIfNull(context);
-        _mapContext = context;
+        ArgumentNullException.ThrowIfNull(mapContext);
+        _mapContext = mapContext;
         OnLoad();
     }
 
@@ -25,7 +25,6 @@ internal abstract class MapDefinition
         finally
         {
             _mapContext.DestroyAllObjects();
-            _mapContext = default;
         }
     }
 
@@ -36,9 +35,6 @@ internal abstract class MapDefinition
         float drawDistance = 300.0f,
         EntityId parent = default)
     {
-        if (_mapContext is null)
-            throw new InvalidOperationException($"Map '{Name}' is not currently loaded.");
-
         return _mapContext.CreateObject(
             modelId,
             position,
