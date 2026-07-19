@@ -1,6 +1,6 @@
 ﻿namespace SampSharp.MapObjects;
 
-internal sealed class MapContext(
+internal class MapContext(
     IWorldService worldService,
     IOmpEntityProvider ompEntityProvider,
     ILogger<MapContext> logger)
@@ -12,7 +12,7 @@ internal sealed class MapContext(
     /// Creates a global object and tracks its identifier so it can be
     /// automatically destroyed when the map is unloaded.
     /// </summary>
-    public GlobalObject CreateObject(
+    public virtual GlobalObject CreateObject(
         int modelId,
         Vector3 position,
         Vector3 rotation,
@@ -38,7 +38,7 @@ internal sealed class MapContext(
     /// <summary>
     /// Destroys every object created through this context.
     /// </summary>
-    public void DestroyAllObjects()
+    public virtual void DestroyAllObjects()
     {
         if (_objectCount == 0)
             return;
