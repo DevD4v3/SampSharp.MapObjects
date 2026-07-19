@@ -1,8 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-
+    <PackageId>SampSharp.MapObjects</PackageId>
+    <Authors>David Román Amariles</Authors>
+    <Copyright>David Román Amariles</Copyright>
+    <PackageProjectUrl>https://github.com/DevD4v3/SampSharp.MapObjects</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/DevD4v3/SampSharp.MapObjects</RepositoryUrl>
+    <PackageTags>gta, samp, sampsharp, openmp</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Description>
+      A .NET library for SampSharp that implements object maps as regular C# classes instead of Pawn filterscripts.
+    </Description>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="True" PackagePath="" />
+    <None Include="..\..\LICENSE" Pack="True" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
