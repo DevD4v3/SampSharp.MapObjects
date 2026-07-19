@@ -13,8 +13,6 @@ public static class ServiceCollectionExtensions
     /// </returns>
     public static IServiceCollection AddMapObjects(this IServiceCollection services)
     {
-        services.AddTransient<MapContext>();
-
         services
             .AddSingleton<MapDefinition, Aim_Headshot>()
             .AddSingleton<MapDefinition, Aim_Headshot2>()
@@ -64,6 +62,7 @@ public static class ServiceCollectionExtensions
                 return maps.ToDictionary(map => map.Name);
             })
             .AddSingleton<IMapObjectService, MapObjectService>()
+            .AddSingleton<MapContext>()
             .AddSystem<DefaultObjectRemovalSystem>();
 
         return services;

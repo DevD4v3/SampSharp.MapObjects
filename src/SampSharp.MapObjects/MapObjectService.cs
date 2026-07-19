@@ -1,7 +1,7 @@
 ﻿namespace SampSharp.MapObjects;
 
 internal sealed class MapObjectService(
-    IServiceProvider serviceProvider,
+    MapContext mapContext,
     Dictionary<string, MapDefinition> maps) : IMapObjectService
 {
     private MapDefinition _loadedMap;
@@ -16,9 +16,8 @@ internal sealed class MapObjectService(
         if (_loadedMap is not null)
             throw new InvalidOperationException($"Map '{_loadedMap.Name}' is already loaded.");
 
-        MapContext context = serviceProvider.GetRequiredService<MapContext>();
         _loadedMap = map;
-        map.Load(context);
+        map.Load(mapContext);
     }
 
     public void Unload()
