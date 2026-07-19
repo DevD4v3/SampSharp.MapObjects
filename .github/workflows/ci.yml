@@ -22,4 +22,6 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
     - name: Execute tests
-      run: dotnet test ./tools/PawnMapTranslator.Tests/PawnMapTranslator.Tests.csproj -c Release
+      run: | 
+        dotnet test ./tools/PawnMapTranslator.Tests/PawnMapTranslator.Tests.csproj -c Release
+        dotnet test ./src/SampSharp.MapObjects.Tests/SampSharp.MapObjects.Tests.csproj -c Release
