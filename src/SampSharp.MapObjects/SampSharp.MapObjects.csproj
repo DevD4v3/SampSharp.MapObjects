@@ -14,4 +14,8 @@
     <ProjectReference Include="..\SampSharp.MapObjects.Abstractions\SampSharp.MapObjects.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="SampSharp.MapObjects.Tests" />
+  </ItemGroup>
+
 </Project>
