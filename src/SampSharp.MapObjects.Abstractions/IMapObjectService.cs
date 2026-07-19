@@ -10,6 +10,7 @@ public interface IMapObjectService
     /// </summary>
     /// <remarks>
     /// If the specified map is not found, this method does nothing.
+    /// Only one map can be loaded at a time.
     /// </remarks>
     /// <param name="mapName">
     /// The unique name of the map to load.
@@ -18,24 +19,15 @@ public interface IMapObjectService
     /// <paramref name="mapName"/> is <see langword="null"/>, empty, or consists only of white-space characters.
     /// </exception>
     /// <exception cref="InvalidOperationException">
-    /// The map has already been loaded.
+    /// Another map is already loaded.
     /// </exception>
     void Load(string mapName);
 
     /// <summary>
-    /// Unloads the specified map and destroys all objects created for it.
+    /// Unloads the currently loaded map and destroys all objects created for it.
     /// </summary>
-    /// <remarks>
-    /// If the specified map is not found, this method does nothing.
-    /// </remarks>
-    /// <param name="mapName">
-    /// The unique name of the map to unload.
-    /// </param>
-    /// <exception cref="ArgumentException">
-    /// <paramref name="mapName"/> is <see langword="null"/>, empty, or consists only of white-space characters.
-    /// </exception>
     /// <exception cref="InvalidOperationException">
-    /// The map is not currently loaded.
+    /// No map is currently loaded.
     /// </exception>
-    void Unload(string mapName);
+    void Unload();
 }

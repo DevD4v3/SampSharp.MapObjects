@@ -4,6 +4,8 @@ internal sealed class MapObjectService(
     IServiceProvider serviceProvider,
     Dictionary<string, MapDefinition> maps) : IMapObjectService
 {
+    private MapDefinition _loadedMap;
+
     public void Load(string mapName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(mapName);
@@ -11,17 +13,26 @@ internal sealed class MapObjectService(
         if (!maps.TryGetValue(mapName, out MapDefinition map))
             return;
 
+        if (_loadedMap is not null)
+            throw new InvalidOperationException($"Map '{_loadedMap.Name}' is already loaded.");
+
         MapContext context = serviceProvider.GetRequiredService<MapContext>();
+        _loadedMap = map;
         map.Load(context);
     }
 
-    public void Unload(string mapName)
+    public void Unload()
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(mapName);
+        if (_loadedMap is null)
+            throw new InvalidOperationException("No map is currently loaded.");
 
-        if (!maps.TryGetValue(mapName, out MapDefinition map))
-            return;
-
-        map.Unload();
+        try
+        {
+            _loadedMap.Unload();
+        }
+        finally 
+        { 
+            _loadedMap = default; 
+        }
     }
 }

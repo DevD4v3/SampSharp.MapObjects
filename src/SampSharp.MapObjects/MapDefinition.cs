@@ -2,7 +2,6 @@
 
 internal abstract class MapDefinition
 {
-    private bool _isLoaded;
     private MapContext _mapContext;
 
     public abstract string Name { get; }
@@ -13,21 +12,12 @@ internal abstract class MapDefinition
     internal void Load(MapContext context)
     {
         ArgumentNullException.ThrowIfNull(context);
-
-        if (_isLoaded)
-            throw new InvalidOperationException($"Map '{Name}' is already loaded.");
-
         _mapContext = context;
-        _isLoaded = true;
-
         OnLoad();
     }
 
     internal void Unload()
     {
-        if (!_isLoaded)
-            throw new InvalidOperationException($"Map '{Name}' is not loaded.");
-
         try
         {
             OnUnload();
@@ -36,7 +26,6 @@ internal abstract class MapDefinition
         {
             _mapContext.DestroyAllObjects();
             _mapContext = default;
-            _isLoaded = false;
         }
     }
 
