@@ -171,9 +171,11 @@ public static class PawnTranslator
                 $"Object variable '{values[0]}' has not been declared.");
         }
 
+        // Pawn SetObjectMaterial stores colors as ARGB.
+        // SampSharp Color(int) expects RGBA, so we must explicitly convert from ARGB.
         return
             $$"""
-            {{variableName}}.SetMaterial(materialIndex: {{values[1]}}, modelId: {{values[2]}}, txdName: {{values[3]}}, textureName: {{values[4]}}, materialColor: new Color({{values[5]}}));
+            {{variableName}}.SetMaterial(materialIndex: {{values[1]}}, modelId: {{values[2]}}, txdName: {{values[3]}}, textureName: {{values[4]}}, materialColor: Color.FromInteger({{values[5]}}, ColorFormat.ARGB));
             """;
     }
 }

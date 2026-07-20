@@ -50,11 +50,11 @@ public class PawnTranslatorTests
                 CreateObject(modelId: 6388, position: new Vector3(-246.37000f, -69.28000f, -11.84000f), rotation: new Vector3(0.00000f, 0.00000f, -17.70000f));
                 CreateObject(modelId: 2932, position: new Vector3(-177.84000f, -84.31000f, 3.44000f), rotation: new Vector3(0.00000f, 0.00000f, -52.02000f));
                 GlobalObject object0 = CreateObject(modelId: 3885, position: new Vector3(-152.15030f, 52.53920f, 2.75850f), rotation: new Vector3(0.00000f, 0.00000f, 146.00000f));
-                object0.SetMaterial(materialIndex: 0, modelId: 10357, txdName: "tvtower_sfs", textureName: "ws_transmit_red", materialColor: new Color(0xFFFFFFFF));
+                object0.SetMaterial(materialIndex: 0, modelId: 10357, txdName: "tvtower_sfs", textureName: "ws_transmit_red", materialColor: Color.FromInteger(0xFFFFFFFF, ColorFormat.ARGB));
                 GlobalObject object1 = CreateObject(modelId: 19378, position: new Vector3(-2268.83500f, -1512.10600f, 1287.41300f), rotation: new Vector3(0.00000f, 0.00000f, 180.00000f));
-                object1.SetMaterial(materialIndex: 0, modelId: 4004, txdName: "civic07_lan", textureName: "badmarb1_LAn", materialColor: new Color(-3149830));
+                object1.SetMaterial(materialIndex: 0, modelId: 4004, txdName: "civic07_lan", textureName: "badmarb1_LAn", materialColor: Color.FromInteger(-3149830, ColorFormat.ARGB));
                 GlobalObject object2 = CreateObject(modelId: 19378, position: new Vector3(-2268.83500f, -1521.72600f, 1287.41300f), rotation: new Vector3(0.00000f, 0.00000f, 180.00000f));
-                object2.SetMaterial(materialIndex: 0, modelId: 4004, txdName: "civic07_lan", textureName: "badmarb1_LAn", materialColor: new Color(0xFF336699));
+                object2.SetMaterial(materialIndex: 0, modelId: 4004, txdName: "civic07_lan", textureName: "badmarb1_LAn", materialColor: Color.FromInteger(0xFF336699, ColorFormat.ARGB));
                 CreateObject(modelId: 18257, position: new Vector3(-142.27528f, 54.97489f, 6.50410f), rotation: new Vector3(0.00000f, 0.00000f, -18.00000f));
                 CreateObject(modelId: 2991, position: new Vector3(-180.94998f, 68.02634f, 7.09530f), rotation: new Vector3(0.00000f, 0.00000f, -18.00000f));
             }
