@@ -55,9 +55,9 @@ internal sealed class WarZone2 : MapDefinition
         CreateObject(modelId: 3271, position: new Vector3(1939.80005f, -2921.10010f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
         CreateObject(modelId: 3271, position: new Vector3(1971.90002f, -3033.60010f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
         CreateObject(modelId: 3271, position: new Vector3(2014.40002f, -3014.60010f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
-        GlobalObject object0 = CreateObject(modelId: 3277, position: new Vector3(1895.69995f, -2975.80005f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
+        GlobalObject object0 = CreateObject(modelId: 3885, position: new Vector3(1895.69995f, -2975.80005f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
         object0.SetMaterial(materialIndex: 0, modelId: 10357, txdName: "tvtower_sfs", textureName: "ws_transmit_red", materialColor: new Color(0xFFFFFFFF));
-        GlobalObject object1 = CreateObject(modelId: 3277, position: new Vector3(2093.69995f, -2977.39990f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
+        GlobalObject object1 = CreateObject(modelId: 3885, position: new Vector3(2093.69995f, -2977.39990f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
         object1.SetMaterial(materialIndex: 0, modelId: 6328, txdName: "sunset04_law2", textureName: "LAbluewall", materialColor: new Color(0xFFFFFFFF));
         CreateObject(modelId: 3279, position: new Vector3(1900.80005f, -2994.89990f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
         CreateObject(modelId: 3279, position: new Vector3(1896.50000f, -2956.50000f, 0.60000f), rotation: new Vector3(0.00000f, 0.00000f, 0.00000f));
