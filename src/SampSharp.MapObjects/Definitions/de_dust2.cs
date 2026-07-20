@@ -681,9 +681,9 @@ internal sealed class de_dust2 : MapDefinition
         object152.SetMaterial(materialIndex: 2, modelId: 19853, txdName: "mihouse1", textureName: "brownwall1", materialColor: new Color(0x00000000));
         object152.SetMaterial(materialIndex: 15, modelId: 16093, txdName: "a51_ext", textureName: "cabin5", materialColor: new Color(0x00000000));
         GlobalObject object153 = CreateObject(modelId: 3928, position: new Vector3(-734.775146f, 2743.471923f, 222.332397f), rotation: new Vector3(0.000000f, 0.000000f, 0.000000f));
-        object153.SetMaterial(materialIndex: 0, modelId: -1, txdName: "none", textureName: "none", materialColor: new Color(0xFF990000));
+        object153.SetMaterial(materialIndex: 0, modelId: -1, txdName: "none", textureName: "none", materialColor: Color.FromInteger(0xFF990000, ColorFormat.ARGB));
         GlobalObject object154 = CreateObject(modelId: 3928, position: new Vector3(-734.786499f, 2743.351074f, 222.332397f), rotation: new Vector3(0.000000f, 0.000000f, 180.000000f));
-        object154.SetMaterial(materialIndex: 0, modelId: -1, txdName: "none", textureName: "none", materialColor: new Color(0xFF990000));
+        object154.SetMaterial(materialIndex: 0, modelId: -1, txdName: "none", textureName: "none", materialColor: Color.FromInteger(0xFF990000, ColorFormat.ARGB));
         GlobalObject object155 = CreateObject(modelId: 3064, position: new Vector3(-759.867187f, 2697.919189f, 223.586898f), rotation: new Vector3(180.000000f, 0.000000f, 0.201000f));
         object155.SetMaterial(materialIndex: 0, modelId: 16093, txdName: "a51_ext", textureName: "des_dirt1", materialColor: new Color(0x00000000));
         object155.SetMaterial(materialIndex: 1, modelId: 16093, txdName: "a51_ext", textureName: "des_dirt1", materialColor: new Color(0x00000000));
